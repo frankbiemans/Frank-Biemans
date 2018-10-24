@@ -54,3 +54,4 @@ npm-debug.log
 **/clean/*
 **/clean/**/*
 **/spotify
+**/wp-config-demo.php
