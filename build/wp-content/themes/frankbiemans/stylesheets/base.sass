@@ -1,0 +1,41 @@
+@import '../../../../../bootstrap-vars.scss'
+
+@import 'assets/fonts'
+@import 'assets/vars'
+@import 'assets/loader'
+@import 'assets/social'
+
+body, html
+	font-family: $font-stack
+	font-size: 16px
+	background: $blue
+	color: #fff
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-stack-h
+	line-height: 1.15
+
+h1
+	font-size: 3rem
+
+img
+	max-width: 100%
+	height: auto
+
+figure
+	margin: 0
+
+	img
+		width: 100%
+
+a
+	transition: all .15s ease-in-out
+
+.alignnone,
+.aligncenter,
+.alignright,
+.alignleft 
+	margin: 0 0 1rem 0
+
+	&[class*=wp-image]
+		width: 100%

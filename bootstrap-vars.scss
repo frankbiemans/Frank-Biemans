@@ -1,0 +1,22 @@
+/* Overrule Bootstrap vars in this doc */
+
+$grid-gutter-width: 2rem;
+
+$grid-breakpoints: (
+  xs: 0, // phones
+  sm: 576px, // tablet portrait
+  md: 768px, // tablet landscape
+  lg: 992px, // desktop 1366x678
+  xl: 1200px, // desktop 1140x900
+  xxl: 1420px, // desktop 1600x900
+  xxxl: 1880px // desktop 1920x1200
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1360px,
+  xxxl: 1820px
+);

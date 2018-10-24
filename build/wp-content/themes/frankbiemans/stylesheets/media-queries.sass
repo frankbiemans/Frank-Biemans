@@ -1,0 +1,37 @@
+@media(min-width:map-get($grid-breakpoints, sm))
+	body, html
+		font-size: 14px
+		
+@media(min-width:map-get($grid-breakpoints, md))
+	body, html
+		font-size: 15px
+
+	.alignnone 
+	    margin: 1.5rem 0
+
+	.aligncenter
+		display: block
+	    margin: .5rem auto
+
+	.alignright 
+	    float: right
+	    margin: .25rem 0 1.5rem 1.5rem
+
+	.alignleft 
+	    float: left
+	    margin: .25rem 1.5rem 1.5rem 0
+
+	.alignnone,
+	.aligncenter,
+	.alignright,
+	.alignleft 
+		&[class*=wp-image]
+			width: auto
+			
+@media(min-width:map-get($grid-breakpoints, lg))
+	body, html
+		font-size: 16px
+
+@media(min-width:map-get($grid-breakpoints, xxl))
+	body, html
+		font-size: 17px
