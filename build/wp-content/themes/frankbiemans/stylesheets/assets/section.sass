@@ -1,0 +1,33 @@
+
+.section
+	display: block
+	position: relative
+	overflow: hidden
+
+.section--full-height
+	min-height: 100vh
+
+	&:before
+		display: block
+		position: absolute
+		top: .5rem
+		left: .5rem
+		bottom: .5rem
+		right: .5rem
+		border: .75rem solid black
+		opacity: .75
+		content: ''
+		z-index: 1
+
+.section__content-wrapper
+	display: block
+	// position: relative
+	// padding: 3rem 0
+
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	z-index: 100
+
+	transform: translateY(-50%)

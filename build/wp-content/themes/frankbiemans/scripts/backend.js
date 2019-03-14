@@ -6,10 +6,13 @@ window.onload = function() {
 	'core/image',
 	'core/heading',
 	'core/list',
+	'core/table',
 	'core/shortcode',
+	'core/quote',
+	'core/button',
 	'core/embed/youtube',
 	'core/embed/vimeo',
-	'core/embed/table'
+	'gravityforms/block'
 	];
 
 	wp.blocks.getBlockTypes().forEach( function( blockType ) {

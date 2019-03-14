@@ -1,22 +1,78 @@
 @import '../../../../../bootstrap-vars.scss'
 
+@import 'assets/keyframes'
 @import 'assets/fonts'
 @import 'assets/vars'
+@import 'assets/mixins'
+@import 'assets/forms'
 @import 'assets/loader'
+@import 'assets/section'
+@import 'assets/background-wrapper'
 @import 'assets/social'
+@import 'assets/button'
 
 body, html
 	font-family: $font-stack
-	font-size: 16px
-	background: $blue
 	color: #fff
+	background: black
+	line-height: 1.6
+
+html
+	font-size: 1px
+	overflow-x: hidden
+
+@media screen and (min-width: 320px)
+	html
+		font-size: calc(16px + 8 * ((100vw - 320px) / 880))
+
+@media(min-width:map-get($grid-breakpoints, xl))
+	html
+		font-size: 24px
 
 h1, h2, h3, h4, h5, h6
+	position: relative
+	margin: 0
 	font-family: $font-stack-h
-	line-height: 1.15
+	line-height: 1.1
+	text-transform: uppercase
+
+h1, h2, h3
+	font-weight: 700
+
+	span
+		display: block
+		position: relative
+		margin-left: -2rem
+		margin-right: -2rem
 
 h1
-	font-size: 3rem
+	color: $dark
+	@include thiccer($darkest)
+	font-size: 6rem
+	z-index: 1
+	overflow: visible
+	margin-bottom: 0
+	line-height: .9
+	letter-spacing: -5px
+
+	transform: perspective(200px) rotateX(15deg) rotateY(0deg)
+
+	span
+		margin-left: -2.5rem
+h2
+	color: $light
+	@include thicc($darkest)
+	// font-style: italic
+	z-index: 2
+	margin-bottom: 1rem
+
+	transform: perspective(200px) rotateX(12.5deg) rotateY(0deg)
+
+h4, h5
+	font-weight: 600
+
+h6
+	font-weight: 500
 
 img
 	max-width: 100%
@@ -30,6 +86,37 @@ figure
 
 a
 	transition: all .15s ease-in-out
+
+p
+	text-shadow: 1px 1px 0 $darkest, 2px 2px 0 $darkest
+	transform: perspective(200px) rotateX(10deg) rotateY(0deg)
+	font-weight: 700
+
+.white
+	color: #fff
+
+.color
+	color: $medium
+
+.page-loaded
+	.loading-screen
+		opacity: 0
+		z-index: -1
+		transform: scale(.65)
+		transition: opacity .5s ease-in-out .25s, transform .5s ease-in-out .25s, z-index 0s linear 1s
+
+.sk-cube-grid
+	position: absolute
+	margin: 0
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+
+	.sk-cube
+		background: white
+
+.container-fluid
+	max-width: 2600px
 
 .alignnone,
 .aligncenter,

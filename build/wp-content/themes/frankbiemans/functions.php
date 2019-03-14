@@ -3,9 +3,6 @@
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 include_once(dirname(__FILE__) . '/wp/_require.php' );
 
-update_option( 'WP_HOME', 'http://'. $_SERVER['HTTP_HOST'] );
-update_option( 'WP_SITEURL', 'http://'. $_SERVER['HTTP_HOST'] );
-
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 
 function return_all_countries() {

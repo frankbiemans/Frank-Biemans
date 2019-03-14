@@ -1,0 +1,23 @@
+@mixin thicc($color)
+	transition: all .35s $transition--bouncey .7s
+	left: 6px
+	top: 6px
+
+	text-shadow: 0
+
+	.page-loaded &
+		left: 0px
+		top: 0px
+		text-shadow: 1px 1px 0 $color, 2px 2px 0 $color, 3px 3px 0 $color, 4px 4px 0 $color, 5px 5px 0 $color, 6px 6px 0 $color
+
+@mixin thiccer($color)
+	transition: all .35s $transition--bouncey .6s
+	left: 12px
+	top: 12px
+
+	text-shadow: 0
+
+	.page-loaded &
+		left: 0px
+		top: 0px
+		text-shadow: 1px 1px 0 $color, 2px 2px 0 $color, 3px 3px 0 $color, 4px 4px 0 $color, 5px 5px 0 $color, 6px 6px 0 $color, 7px 7px 0 $color, 8px 8px 0 $color, 9px 9px 0 $color, 10px 10px 0 $color, 11px 11px 0 $color, 12px 12px 0 $color

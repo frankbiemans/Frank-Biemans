@@ -1,35 +1,24 @@
-$(window).on("load", function() {
-    setTimeout(function() {
-        $('.loading-screen').fadeOut(260, function() {
-            $('.loading-screen, #loading-style').remove();
-        });
-    }, 500);
+$(window).resize(function() {
+    if (this.resizeTO) clearTimeout(this.resizeTO);
+    this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+    }, 260);
 });
 
+$(window).bind('resizeEnd', function() {});
 
-(function($) {
+$(window).scroll(function() {
+    if ($(window).scrollTop() > $('.header').height()) {
+        $('body').addClass('scrolled-post-header');
+    } else {
+        $('body').removeClass('scrolled-post-header');
+    }
+});
 
-    $('[data-cookies-accept]').click(function(e) {
-        var __this = $(this);
-        var cookieBanner = __this.closest('.cookie-banner');
-        $.ajax({
-            method: "GET",
-            url: "/wp-content/themes/startkit/php-actions/set-cookie.php",
+$(document).ready(function() {});
 
-        }).done(function(data) {
-            __this.closest('.cookie-banner').animate({
-                height: '0px'
-            }, 260, function() {
-                cookieBanner.remove();
-            });
-        });
-    });
-
-    $('.slider').slick({
-        prevArrow: '<div class="slick-arrow--prev"><span class="slick-arrow__icon"><i class="far fa-angle-left"></i></span></div>',
-        nextArrow: '<div class="slick-arrow--next"><span class="slick-arrow__icon"><i class="far fa-angle-right"></i></span></div>',
-        autoplay: true,
-        autoplaySpeed: 4500
-    });
-
-})(jQuery);
+$(window).on("load", function() {
+    setTimeout(function() {
+        $('body').toggleClass('page-loading page-loaded');
+    }, 250);
+});
